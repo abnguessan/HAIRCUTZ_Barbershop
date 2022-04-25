@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- Aboubacar Nguessan -->
+<!-- CSCE 3420 Internet Programming -->
+<!-- Prof: Dr Sultan Al Saif-->
+<!-- Project -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+        <link rel="icon" href="favicon.ico">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous"></script>
+        
+        <title>Haircutz_Home</title>
+    </head>
+    <body>
+        <!--Navigation -->
+        <nav>
+            <img src="images/logo.png" alt="logo">
+            <div class="navigation">
+                <ul id="navbar">
+                    <i id="menu-close" class="fas fa-times"></i>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+                <img id="menu-btn" src="images/menu.png" alt="menu_icon">
+            </div>
+        </nav>
+
+        <!--Home -->
+
+        <section id="home">
+            <h2>Your Dream Haircut & More</h2>
+           
+            <div class="btn">
+                <a class="blue" href="services.html">Check Our Services</a>
+                <a class="red" href="#">Book A Haircut</a>
+            </div>
+            <!-- Book Appointment -->
+
+            <div class="popup">
+                <div class="close-btn">&times;</div>
+                <div class="form">
+                  <h4>Book Your Appointment</h4>
+                  <div class="form-element">
+                    <p><label>First name:</label>
+                      <input type="text" id="fName" placeholder="Enter Your First Name">
+                    </p>
+                    <p><label>Last name:</label>
+                      <input type="text" id="lName" placeholder="Enter Your Last Name">
+                    </p>
+                    <p><label>E-mail:</label>
+                      <input type="email" id="email" placeholder="Enter Your E-mail">
+                    </p>
+                    <p><label>Phone number:</label>
+                      <input type="tel" id="phone" placeholder="Enter Your Phone Number">
+                    </p>
+                    <p><label for="barbers">Barber:</label>
+                      <input type="text" name="barbers" placeholder="Select a Barber" list="barber-name">
+                      <datalist id="barber-name">
+                        <option>Aaron Smith</option>
+                        <option>Jackie Yuan</option>
+                        <option>Hamed Toure</option>
+                        <option>Jay Johnson</option>
+                      </datalist>
+                    </p>
+                    <p><label for="service">Service:</label>
+                      <input type="text" name="service" placeholder="Select a Service" list="service-name">
+                      <datalist id="service-name">
+                        <option>Haircut</option>
+                        <option>Buzz</option>
+                        <option>Beard Details</option>
+                        <option>Beard with Shave</option>
+                        <option>Boys Cut (3 - 13 Years Old)</option>
+                        <option>Shave</option>
+                        <option>Head Shave</option>
+                        <option>Haircut & Beard</option>
+                        <option>Haircut & Beard with Shave</option>
+                        <option>Haircut with Shave</option>
+                      </datalist>
+                    </p>
+                    <p><label>Date:</label>
+                      <input type="date">
+                    </p>
+                    <p><label for="hours">Time:</label>
+                      <input type="text" name="hours" placeholder="Select a Time" list="hours">
+                      <datalist id="hours">
+                        <option>09:00 am</option>
+                        <option>10:00 am</option>
+                        <option>11:00 am </option>
+                        <option>12:00 pm</option>
+                        <option>01:00 pm</option>
+                        <option>02:00 pm</option>
+                        <option>03:00 pm</option>
+                        <option>04:00 pm</option>
+                        <option>05:00 pm</option>
+                        <option>06:00 pm</option>
+                        <option>07:00 pm</option>
+                      </datalist>
+                    </p>
+                    <button type="button" class="button">Book Appointment</button>
+                  </div>
+                </div>
+              </div>
+              <div class="booked">
+                <div class="close-btn2">&times;</div>
+                  <h4>Your Appointment Is Confirmed</h4>
+                  <p>See You Soon for your Celebrity Haircut!</p>
+                </div>
+        </section>
+
+        <!--Info -->
+
+        <section id="info">
+            <h1>Walk Ins Are Welcome!</h1>
+            
+            <div class="inf-base">
+                <div class="inf-box">
+                    <img src="images/hours.png" alt="Calendar_Clock">
+                    <h3>Hours Of Operation</h3>
+                    <ul>
+                        <li>Tuesday- Wednesday-Thursday: 10:00 am to 06:00 pm</li>
+                        <li>Friday-Saturday-Sunday: 09:00 am to 07:00 pm</li>
+                        <li>Closed on Monday</li>
+                    </ul>
+                </div>
+                <div class="inf-box">
+                    <img src="images/address.png" alt="Google_Map">
+                    <h3>We Are Located At:</h3>
+                    <p><a href="https://www.google.com/maps/search/3445+lovers+lane/@32.7178544,-96.5249768,15z/data=!3m1!4b1">
+                        3445 lovers lane Dallas, Texas 78546</a></p>
+
+                </div>
+                <div class="inf-box">
+                    <img src="images/phone.png" alt="Telephone">
+                    <h3>Call Us At:</h3>
+                    <ul>
+                        <li>800-555-7777</li>
+                        <li>800-555-3333</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+         
+<!--Styles -->
+
+        <section id="styles">
+            <h1 >Check Some Of Our Work</h1>
+            <div class="styles-box">
+
+                <div class="styles">
+                    <img src="images/hairstyle1.jpg" alt="Hairstyle1">
+                </div>
+                <div class="styles">
+                    <img src="images/hairstyle5.jpg" alt="Hairstyle5">
+                </div>
+                <div class="styles">
+                    <img src="images/hairstyle2.jpg" alt="Hairstyle2">
+                </div>
+                <div class="styles">
+                    <img src="images/hairstyle4.jpg" alt="Hairstyle4">
+                </div>
+                <div class="styles">
+                    <img src="images/hairstyle6.jpg" alt="Hairstyle6">
+                </div>
+                
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Join Our Newsletter And Get some Amazing Discounts</p>
+                <div class="subscribe">
+                    <input type="text" placeholder="Enter Your Email Here">
+                    <a href="#" class="red">SUBSCRIBBE</a>
+                </div>
+                <div class="copyright">
+                    <p>This Site Is Developed By Aboubacar Nguessan</p>
+                    <div class="member-links">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-snapchat"></i>
+                    </div>
+                </div>
+            </div>
+           
+        </footer>
+
+
+    </body>
+    <script src="script.js"></script>
+</html>

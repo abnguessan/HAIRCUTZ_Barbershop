@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(35, 35, 85);
+}
+
+span{
+    font-size: .9rem;
+    color: #757373;
+}
+
+h6{
+    font-size: 2rem;
+    color: rgb(24, 24, 49);
+}
+
+/* Navigation*/
+
+nav{
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 8vw;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+}
+
+nav img{
+    width: 250px ;
+    height: 80px;
+    cursor: pointer;
+}
+
+nav .navigation{
+    display: flex;
+}
+
+#menu-btn{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+#menu-close{
+    display: none;
+}
+
+nav .navigation ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav .navigation ul li{
+    list-style: none;
+    margin-left: 30px;
+    
+}
+
+nav .navigation ul li a{
+    text-decoration: none;
+    color: rgb(21, 21, 100);
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+#navbar li a{
+    position: relative;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: #950404;
+ }
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 70%;
+    height: 2px;
+    background: #950404 ;
+    position: absolute;
+    bottom: -4px;
+    left:0px
+
+}
+
+
+/* Home/index */
+
+#home{
+    background-image: linear-gradient(rgba(255,255,255,1), rgba(240,240,240,1) 5%, rgba(0,0,0,0) ),url("images/carousel2.jpg");
+    width: 100%;
+    height: 65vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#home h2{
+    color: rgb(25, 5, 46);
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+}
+
+#home h2:hover,
+#info h1:hover,
+#styles h1:hover,
+#team h1:hover,
+#service h1:hover{
+    color: #950404;
+}
+
+#home .btn{
+    margin-top: 30px;
+}
+
+#home a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background-color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+#home a.blue{
+    color: #fff;
+    background: rgb(21, 21, 100);
+    transition: 0.3s ease;
+}
+
+#home a.blue:hover{
+    color: rgb(21, 21, 100);
+    background: #fff;
+}
+
+#home a.red{
+    color: #fff;
+    background: #950404;
+    transition: 0.3s ease;
+}
+
+#home a.red:hover{
+    color: rgb(21, 21, 100);
+    background: #fff;
+}
+
+/*Book Appointment*/
+.popup,
+.booked{
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 400px;
+    padding: 10px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+  }
+
+  .booked{
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 400px;
+    height: 150px;
+    padding: 10px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+  }
+  .popup.active,
+  .booked.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+    
+  }
+  
+  .popup .close-btn,
+  .booked .close-btn2{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    background: rgb(21, 21, 100);
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+   .popup .form h4,
+   .booked h4 p{
+    color:rgb(21, 21, 100);
+
+   }
+
+   .booked p{
+       padding: 20px;
+   }
+  
+  .popup .form .form-element{
+    margin: 15px ;
+  }
+  .popup .form .form-element label{
+    font-size: 16px;
+    color: #222;
+  }
+  .popup .form .form-element input{
+    margin-top: 5px;
+    width: 100%;
+    display:block;
+    padding:10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+  }
+  .popup .form .form-element button{
+    width: 80%;
+    height: 40px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: rgb(21, 21, 100);
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+
+/* Info/index */
+
+#info{
+    padding: 2vw 8vw 2vw 8vw;
+    text-align: center;
+}
+
+#info .inf-base{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 20px;
+
+}
+
+#info .inf-box{
+    background: #F9F9FF;
+    text-align: start;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+#info .inf-box h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(46, 46, 59);
+    padding: 13px 0 7px 0;
+}
+
+#info .inf-box p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(65, 65, 195);
+    
+}
+
+#info ul li:hover{
+    color: #950404;
+}
+
+
+/* Styles/index */
+
+#styles{
+    padding: 1vw 5vw;
+    text-align: center;
+}
+
+
+
+#styles .styles-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 20px;
+}
+
+#styles .styles img{
+    width: 100%;
+    height: 80%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+/* Services */
+
+#service{
+    padding: 8vw 4vw 4vw 8vw;
+}
+
+#service h1{
+    text-align: center;
+}
+
+#service .ser-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 7rem;
+    margin-top: 20px;
+}
+
+#service .ser-box .table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1.5rem;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#service .ser-box .table thead tr{
+    background-color: rgb(35, 35, 85);
+    color: #fff;
+    text-align: left;
+    
+}
+
+#service .ser-box .table th,
+#service .ser-box .table td{
+    padding: 10px 10px;
+}
+
+#service .ser-box .table td{
+    color: rgb(35, 35, 85);
+}
+
+#service .ser-box .table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+#service .ser-box .table tbody tr:nth-of-type(even){
+    background-color: #f3c8c8;
+}
+
+#service .ser-box .table tbody tr:last-of-type{
+    border-bottom:2px solid rgb(35, 35, 85) ;
+}
+
+/* Team */
+
+#team{
+    padding: 8vw 4vw 0 4vw;
+    text-align: center;
+}
+
+#team .team-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 20px;
+}
+
+
+
+#team .member img{
+    width: 80%;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.member-links{
+    margin-top: 10px;
+}
+
+.member-links i{
+    padding: 10px 15px;
+    border: 1px solid rgb(21, 21, 100);
+    cursor: pointer;
+    transition: 0.3s ease ;
+}
+
+.member-links i:hover{
+    background: rgb(21, 21, 100) ;
+    color: #fff;
+    border: 1px solid rgb(21, 21, 100);
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer{
+    padding: 2vw;
+    background-color: rgb(25, 5, 46);
+    display: flex;
+    justify-content: center;
+}
+
+footer .footer-col{
+    padding-bottom: 40px;
+}
+
+footer h3{
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+footer p{
+    color: #7b838a;
+}
+
+footer .subscribe{
+    margin-top: 20px;
+}
+
+footer input{
+    width: 400px;
+    padding: 15px 12px;
+    background: #f3c8c8;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+footer .subscribe a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 12px 15px;
+    background-color: #fff;
+    font-weight: 600;
+}
+
+footer .subscribe a.red{
+    color: #fff;
+    background: #950404;
+    transition: 0.3s ease;
+}
+
+footer .subscribe a.red:hover{
+    color: rgb(21, 21, 100);
+    background: #fff;
+}
+
+footer .copyright{
+    margin-top: 40px;
+    width: 100%;
+}
+
+footer .copyright p{
+    color: #fff;
+}
+
+footer .copyright .member-links{
+    margin-top: 0px;
+}
+
+footer .copyright .member-links i{
+    background-color: #5f7185;
+    color: #fff;
+}
+
+footer .copyright .member-links i:hover{
+    background-color: #950404;
+    color: #2c2c2c;
+}
+
+/* Responsiveness */
+
+@media (max-width:769px) {
+    nav{
+        padding: 15px 20px;
+    }
+    
+    #menu-btn{
+        
+        display: initial;
+    }
+    
+    #menu-close{
+        display: initial;
+        font-size: 1.6rem;
+        color: #fff;
+        padding: 30px 0 20px 20px;
+
+    }
+    nav .navigation ul{
+        position: absolute;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        background: rgba(17, 20, 104, 0.45);
+        backdrop-filter: blur(4.5px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: 0.3s ease;
+    }
+    nav .navigation ul.active{
+        right: 0;
+    }
+    nav .navigation ul li{
+        padding: 20px 0 20px 40px;
+        margin-left: 0;
+    }
+    nav .navigation ul li a{
+        color: #fff;
+    }
+}
+@media (max-width:1400px){
+    #service h1,
+    #team h1{
+        padding: 30px  ;
+        position: relative;
+    }
+}
+
+/* Aboubacar Nguessan 
+CSCE 3420 Internet Programming 
+Prof: Dr Sultan Al Saif
+Project */
+
