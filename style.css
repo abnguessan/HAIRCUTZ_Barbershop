@@ -505,59 +505,6 @@ footer .copyright .member-links i:hover{
     color: #2c2c2c;
 }
 
-/* Responsiveness */
-
-@media (max-width:769px) {
-    nav{
-        padding: 15px 20px;
-    }
-    
-    #menu-btn{
-        
-        display: initial;
-    }
-    
-    #menu-close{
-        display: initial;
-        font-size: 1.6rem;
-        color: #fff;
-        padding: 30px 0 20px 20px;
-
-    }
-    nav .navigation ul{
-        position: absolute;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        background: rgba(17, 20, 104, 0.45);
-        backdrop-filter: blur(4.5px);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        transition: 0.3s ease;
-    }
-    nav .navigation ul.active{
-        right: 0;
-    }
-    nav .navigation ul li{
-        padding: 20px 0 20px 40px;
-        margin-left: 0;
-    }
-    nav .navigation ul li a{
-        color: #fff;
-    }
-}
-@media (max-width:1400px){
-    #service h1,
-    #team h1{
-        padding: 30px  ;
-        position: relative;
-    }
-}
-
 /* Aboubacar Nguessan 
 CSCE 3420 Internet Programming 
 Prof: Dr Sultan Al Saif
